@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="android.app.com.emilyrobot.HomeActivity">
+
+
+
+    <android.support.v7.widget.Toolbar
+     android:id="@+id/toolbar"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:background="?attr/colorPrimary"
+     app:layout_scrollFlags="scroll|enterAlways"
+
+     app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+     <ImageView
+         android:id="@+id/imageView"
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         app:srcCompat="@drawable/logo"
+         android:layout_gravity="left"
+         />
+
+     <ImageButton
+         android:id="@+id/cameraButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginRight="40dp"
+         android:layout_marginLeft="40dp"
+         android:layout_gravity="left"
+         android:background="?android:attr/selectableItemBackground"
+         android:src="@drawable/camera_48" />
+
+     <ImageButton
+         android:id="@+id/connectButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginRight="40dp"
+         android:layout_marginLeft="40dp"
+         android:layout_gravity="right"
+         android:background="?android:attr/selectableItemBackground"
+         android:src="@drawable/disconnected_48" />
+
+     <ImageButton
+         android:id="@+id/settingButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="right"
+         android:layout_marginLeft="40dp"
+         android:layout_marginRight="40dp"
+         android:background="?android:attr/selectableItemBackground"
+         android:onClick="openSettingsPage"
+         android:src="@drawable/ic_settings_black_24dp" />
+
+     <TextView
+         android:id="@+id/statusMessage"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:text="Status Message"
+         android:textSize="30sp"
+         android:textStyle="bold" />
+
+
+ </android.support.v7.widget.Toolbar>
+
+ <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+
+ <fragment
+     android:layout_width="150dp"
+     android:layout_height="match_parent"
+     android:id="@+id/fragment_details"
+     android:layout_marginStart="4dp"
+     android:layout_weight="0.2"
+     android:name="android.app.com.emilyrobot.FragmentDetails"
+     />
+
+
+ <fragment
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:id="@+id/fragment_maps"
+     android:layout_weight="2"
+     android:name="android.app.com.emilyrobot.FragmentMaps"
+     >
+
+     <ImageView
+         android:id="@+id/cameraDisplay"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:visibility="invisible"
+         app:srcCompat="@drawable/video_placeholder"
+         android:layout_gravity="left"
+         />
+
+  </fragment>
+
+</LinearLayout>
+
+
+</LinearLayout>
